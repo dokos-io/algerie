@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include algerie *.css
+recursive-include algerie *.csv
+recursive-include algerie *.html
+recursive-include algerie *.ico
+recursive-include algerie *.js
+recursive-include algerie *.json
+recursive-include algerie *.md
+recursive-include algerie *.png
+recursive-include algerie *.py
+recursive-include algerie *.svg
+recursive-include algerie *.txt
+recursive-exclude algerie *.pyc
