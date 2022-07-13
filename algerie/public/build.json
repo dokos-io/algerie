@@ -1,0 +1,8 @@
+{
+    "css/algerie.css": [
+        "public/scss/theme.scss"
+    ],
+    "js/algerie.js": [
+        "public/js/theme.js"
+    ]
+}

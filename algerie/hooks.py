@@ -13,11 +13,11 @@ app_license = "MIT"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/algerie/css/algerie.css"
-# app_include_js = "/assets/algerie/js/algerie.js"
+app_include_css = "/assets/css/algerie.css"
+app_include_js = "/assets/js/algerie.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/algerie/css/algerie.css"
+# web_include_css = "/assets/css/algerie.css"
 # web_include_js = "/assets/algerie/js/algerie.js"
 
 # include custom scss in every website theme (without file extension ".scss")
@@ -28,10 +28,10 @@ app_license = "MIT"
 # webform_include_css = {"doctype": "public/css/doctype.css"}
 
 # include js in page
-# page_js = {"page" : "public/js/file.js"}
+page_js = {"point-of-sale" : "public/js/pos.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {"Customer" : "public/js/customer.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -88,21 +88,19 @@ app_license = "MIT"
 # DocType Class
 # ---------------
 # Override standard doctype classes
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+	"Customer": "algerie.overrides.AlgerieCustomer"
+}
 
 # Document Events
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"Customer": {
+		"validate": "algerie.custom_hooks.customer_validation"
+	}
+}
 
 # Scheduled Tasks
 # ---------------
